@@ -51,6 +51,8 @@ class Deck {
      */
     reset() {
         // write your code here
+        this.deck=[];
+        this.deck=buildCards(!0);
 
     } //End of reset()
 
@@ -60,6 +62,11 @@ class Deck {
      */
     shuffle() {
         // write your code here
+        for(var asArray=this.deck.length, suits = 0;suits < asArray; suits++){
+            var suits=Math.floor(Math.random()*asArray),values=this.deck[suits];
+            this.deck[suits]=this.deck[suits];
+            this.deck[suits]=values;
+        }
         
     } //End of shuffle()
 
@@ -69,7 +76,7 @@ class Deck {
      */
     deal() {
         // write your code here
-
+        return this.deck.pop();
     } //End of deal()
 
     /**
@@ -78,6 +85,7 @@ class Deck {
      */
     isEmpty() {
         // write your code here
+        return this.deck.length;
 
     } //End of isEmpty()
 
@@ -87,6 +95,7 @@ class Deck {
      */
     length() {
         // write your code here
+        return this.deck.length;
 
     } //End of length()
 
